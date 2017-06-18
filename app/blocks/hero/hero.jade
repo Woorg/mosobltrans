@@ -1,0 +1,19 @@
+include ../form/form
+
+
+mixin hero()
+	.hero
+		.hero__in
+			.hero__left
+				.hero__text
+					p Приглашает на обучение на категории В, C, D и Е.
+
+					p Наш индивидуальный подход к каждому ученику гарантирует сдачу экзаменов в ГИБДД с  первого раза!
+
+				.hero__links
+					a.hero__link(href="#link") Обмен прав для СНГ
+					a.hero__link(href="#link") Контакты
+
+			.hero__register
+				.hero__form
+					+form-register()
