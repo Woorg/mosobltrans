@@ -1,18 +1,93 @@
-// .hero
-// 	display block
-// 	&__in
+.hero
+	display block
+	background transparent url('../images/content/hero-img.jpg') 50% 0 no-repeat
+	&__in
+		@extends .in
+		padding-top 34px
+		padding-bottom 36px
+		font-size 26px
+		clearfix()
+	&__left
+		float left
+		width 440px
+	&__title
+		margin-bottom 30px
+		padding-right 110px
+		span
+			color #f26c4f
+	&__text
+		margin-bottom 70px
+		padding-right 110px
+		p
+			margin-bottom 30px
+			span
+				color #f26c4f
+				text-transform uppercase
 
-// 	&__left
+	&__links
+		font-size 0
+		white-space nowrap
+	&__link
+		position relative
+		margin-left 50px
+		display inline-block
+		vertical-align top
+		color #3f3f3f
+		font-size 24px
+		line-height 1.2
+		text-decoration none
+		overflow hidden
+		&:first-child
+			margin-left 0
+		&:after
+			position absolute
+			top 50%
+			left 0
+			margin-top -13px
+			content ""
+		&:before
+			position absolute
+			bottom 0
+			left 30px
+			right 0
+			width 100%
+			content ""
+			background transparent
+			background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em
+			border-bottom 1px dashed transparent
+		&:hover
+			&:before
+				background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, transparent 0, transparent 25%, transparent 0, transparent 50%) 0 / .6em .6em
 
-// 	&__text
+	&__link_exchange
+		padding-left 30px
+		&:after
+			retinaSprite($person_group)
+	&__link_contacts
+		padding-left 36px
+		&:after
+			retinaSprite($mail_group)
+		&:before
+			left 36px
 
-// 		p
+	&__register
+		float right
+		width 370px
+		border-radius 5px
+		border 3px solid #ffffff
+		background-color rgba(255, 255, 255, 0.95)
+	&__form
+		position relative
+		&:after
+			position absolute
+			z-index -1
+			bottom -20px
+			left 50%
+			margin-left -141px
+			width 282px
+			height 46px
+			background url('../images/general/shadow.png') 0 0 no-repeat
+			content ""
 
-// 	&__links
-
-// 	&__link
-
-// 	&__register
-
-// 	&__form
+	// &__form
 

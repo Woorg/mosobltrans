@@ -1,18 +1,45 @@
-// .footer
-// 	display block
-// 	&__in
+.footer
+	display block
+	background-color #258bcc
+	&__in
+		@extends .in
+		padding-top 47px
+		padding-bottom 40px
+		min-height 163px
+	&__row
+		margin-bottom 20px
+		clearfix()
+	&__logo,
+	&__nav,
+	&__phone,
+	&__address,
+	&__copyright
+		display inline-block
+		vertical-align middle
+		color #FFF
+	&__logo
+		line-height 1
+	&__nav
+		margin-top 15px
+		float right
+	// &__phone
+	&__address
+		margin-left 137px
+	&__copyright
+		float right
 
-// 	&__row
 
-// 	&__logo
+.nav
+	&__list
+		font-size 0
+	&__item
+		margin-left 20px
+		display inline-block
+		vertical-align middle
 
-// 	&__nav
-
-// 	&__phone
-
-// 	&__address
-
-// 	&__copyright
-
-
-
+		&:first-child
+			margin-left 0
+		a
+			color #FFF
+			font-size 18px
+			text-decoration none

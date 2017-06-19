@@ -5,14 +5,12 @@ mixin hero()
 	section.hero
 		.hero__in
 			.hero__left
-				h1.hero__title Приглашает на обучение на категории В, C, D и Е.
+				h1.hero__title Приглашает на обучение на категории <span>В, C, D и Е.</span>
 				.hero__text
-					p Наш индивидуальный подход к каждому ученику гарантирует сдачу экзаменов в ГИБДД с  первого раза!
-
+					p Наш индивидуальный подход к каждому ученику гарантирует <br/>сдачу экзаменов <br/>в ГИБДД<br/> с  <span>первого раза!</span>
 				.hero__links
-					a.hero__link(href="#link") Обмен прав для СНГ
-					a.hero__link(href="#link") Контакты
-
+					a.hero__link.hero__link_exchange(href="#link") Обмен прав для СНГ
+					a.hero__link.hero__link_contacts(href="#link") Контакты
 			.hero__register
 				.hero__form
 					+form-register()

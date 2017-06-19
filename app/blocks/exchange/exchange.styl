@@ -1,11 +1,38 @@
 .exchange
 	display block
-	// &__in
+	background url('../images/general/exchange-bg.jpg') 50% 0 no-repeat
+	&__in
+		@extends .in
+		padding-top 149px
+		padding-bottom 77px
+		clearfix()
+	&__content
+		position relative
+		float right
+		text-align center
+		&:after
+			position absolute
+			bottom -73px
+			left -27px
+			retinaSprite($arrow_down_left_group)
+			content ""
 
-	// &__content
+	&__title
+		@extends .title
+		margin-bottom 50px
+		span
+			display block
+			color #f26c4f
+			font-family $pfb
+			font-size 30px
+	&__text
+		font-size 18px
+		font-family $pfb
+		span
+			font-size 24px
+			text-transform uppercase
 
-	// &__title
-
-	// &__text
-
-	// &__price
+	&__price
+		font-size 30px
+		font-family $pfb
+		color #f26c4f

@@ -1,2 +1,55 @@
 .form
-	display block
+	margin auto
+	padding-top 50px
+	padding-right 23px
+	padding-bottom 50px
+	padding-left 26px
+	width 364px
+
+	&__title
+		margin-bottom 16px
+		padding-left 64px
+		padding-right 64px
+		font-size 24px
+		text-transform uppercase
+		text-align center
+	&__form
+		text-align center
+
+	&__field
+		margin-bottom 10px
+	&__input
+		border 1px solid #dddddd
+		padding-top 16px
+		padding-right 12px
+		padding-bottom 14px
+		padding-left 12px
+		width 100%
+		background-color #ffffff
+		color #3f3f3f
+		font-family $pfti
+		font-size 14px
+		border-radius 5px
+		+placeholder()
+			color #8e9393
+	&__captcha
+		margin-top 16px
+		margin-bottom 17px
+	&__submit
+		@extends .button
+		width 100%
+
+.form_wide
+	width 682px
+	.form__w,
+	.form__captcha
+		margin-left 20px
+		display inline-block
+		vertical-align top
+		width 300px
+		&:first-child
+			margin-left 0
+	.form__submit
+		margin 20px auto 0
+		width 321px
+

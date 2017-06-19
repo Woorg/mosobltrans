@@ -1,2 +1,69 @@
 .tabs
-	display block
+	&__in
+		@extends .in
+	&__nav
+		font-size 0
+		clearfix()
+	&__link
+		position relative
+		border 5px solid #f8f8f8
+		margin-left 21px
+		padding 22px 24px 36px 98px
+		// width 280px
+		display inline-block
+		vertical-align top
+		background-color #ffffff
+		color #3f3f3f
+		font-size 24px
+		text-decoration none
+		border-radius 5px
+		span
+			font-family $pfb
+			color #f26c4f
+		&:hover
+			text-decoration none
+		&:first-child
+			margin-left 0
+		&:after
+			vcentery()
+			left 20px
+			content ""
+	&__link_active
+		background url('../images/general/cat-tab-active.png') 0 0 / cover no-repeat
+		color #fff
+		text-decoration none
+		span
+			color #FFF
+	&__link_cat-b
+		&:after
+			retinaSprite($cat_b_group)
+		&.tabs__link_active
+			&:after
+				retinaSprite($cat_b_active_group)
+	&__link_cat-c
+		&:after
+			retinaSprite($cat_c_group)
+		&.tabs__link_active
+			&:after
+				retinaSprite($cat_c_active_group)
+	&__link_cat-d
+		&:after
+			retinaSprite($cat_d_group)
+		&.tabs__link_active
+			&:after
+				retinaSprite($cat_d_active_group)
+	&__link_cat-e
+		&:after
+			retinaSprite($cat_e_group)
+		&.tabs__link_active
+			&:after
+				retinaSprite($cat_e_active_group)
+
+	// &__content
+
+	&__tab
+		display none
+	&__tab_active
+		display block
+		font-size 14px
+		color #000

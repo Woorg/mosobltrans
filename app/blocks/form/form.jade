@@ -1,39 +1,41 @@
 mixin form-register()
 	.form
-		h2.form__title Записаться на обучение
+		h2.form__title Записаться <br/>на обучение
 		form.form__form(action="")
 			.form__field
 				input.form__input(type="text", placeholder="Ваше имя", value="")
 			.form__field
-				input.form__input(type="text", placeholder="Ваше имя", value="")
+				input.form__input(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="")
 			.form__captcha
 				img(src="assets/images/general/captcha.jpg", alt="")
 
-			input.form__submit(type="text", value="Перезвоните мне")
+			input.form__submit(type="submit", value="Перезвоните мне")
 
 
 mixin form-register-wide()
 	.form.form_wide
 		h2.form__title Записаться на обучение
 		form.form__form(action="")
-			.form__field
-				input.form__input(type="text", placeholder="Ваше имя", value="")
-			.form__field
-				input.form__input(type="text", placeholder="Ваше имя", value="")
+			.form__w
+				.form__field
+					input.form__input(type="text", placeholder="Ваше имя", value="")
+				.form__field
+					input.form__input(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="")
 			.form__captcha
 				img(src="assets/images/general/captcha.jpg", alt="")
 
-			input.form__submit(type="text", value="Перезвоните мне")
+			input.form__submit(type="submit", value="Перезвоните мне")
 
 mixin form-exchange()
 	.form.form_wide
 		h2.form__title Записаться на обмен прав
 		form.form__form(action="")
-			.form__field
-				input.form__input(type="text", placeholder="Ваше имя", value="")
-			.form__field
-				input.form__input(type="text", placeholder="Ваше имя", value="")
+			.form__w
+				.form__field
+					input.form__input(type="text", placeholder="Ваше имя", value="")
+				.form__field
+					input.form__input(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="")
 			.form__captcha
 				img(src="assets/images/general/captcha.jpg", alt="")
 
-			input.form__submit(type="text", value="Перезвоните мне")
+			input.form__submit(type="submit", value="Перезвоните мне")
