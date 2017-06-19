@@ -2,20 +2,24 @@
 	&__in
 		@extends .in
 	&__nav
+		position relative
+		z-index 1
 		font-size 0
 		clearfix()
 	&__link
 		position relative
 		border 5px solid #f8f8f8
-		margin-left 21px
-		padding 22px 24px 36px 98px
+		margin-left 30px
+		padding 27px 13px 24px 110px
 		// width 280px
 		display inline-block
-		vertical-align top
+		vertical-align middle
 		background-color #ffffff
 		color #3f3f3f
 		font-size 24px
+		text-align right
 		text-decoration none
+		white-space nowrap
 		border-radius 5px
 		span
 			font-family $pfb
@@ -29,19 +33,23 @@
 			left 20px
 			content ""
 	&__link_active
-		background url('../images/general/cat-tab-active.png') 0 0 / cover no-repeat
+		padding 37px 11px 36px 110px
+		border-color transparent
+		background url('../images/general/cat-tab-active.png') 50% 0 / cover no-repeat
 		color #fff
 		text-decoration none
 		span
 			color #FFF
 	&__link_cat-b
 		&:after
+			left 8px
 			retinaSprite($cat_b_group)
 		&.tabs__link_active
 			&:after
 				retinaSprite($cat_b_active_group)
 	&__link_cat-c
 		&:after
+			left 12px
 			retinaSprite($cat_c_group)
 		&.tabs__link_active
 			&:after
@@ -59,7 +67,8 @@
 			&:after
 				retinaSprite($cat_e_active_group)
 
-	// &__content
+	&__content
+		margin-top -20px
 
 	&__tab
 		display none

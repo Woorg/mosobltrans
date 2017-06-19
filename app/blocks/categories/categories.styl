@@ -2,7 +2,7 @@
 	display block
 	&__in
 		@extends .in
-		padding-top 82px
+		padding-top 74px
 		padding-bottom 85px
 		clearfix()
 	&__category
@@ -10,14 +10,37 @@
 
 	&__category_b
 		background url('../images/content/cat-b-img.jpg') 50% 0 no-repeat
+		.categories__cta
+			&:after
+				bottom 0
+				left 0
+				retinaSprite($arrow_down_left_group)
 	&__category_c
 		background url('../images/content/cat-c-img.jpg') 50% 0 no-repeat
+		.categories__cta
+			&:after`
+				bottom 0
+				right 0
+				retinaSprite($arrow_down_right_group)
 	&__category_d
 		background url('../images/content/cat-d-img.jpg') 50% 0 no-repeat
+		.categories__cta
+			&:after
+				bottom 0
+				left 0
+				retinaSprite($arrow_down_left_2_group)
 	&__category_e
 		background url('../images/content/cat-e-img.jpg') 50% 0 no-repeat
+		.categories__cta
+			&:after
+				bottom 0
+				right 0
+				retinaSprite($arrow_down_right_group)
+	&__row
+		clearfix()
 
-	// &__content
+	&__content
+		width 505px
 
 	&__content_right
 		float right
@@ -25,10 +48,74 @@
 		float left
 
 	&__title
-
-	&__list
-
-	&__item
-
-	&__duration
+		margin-bottom 13px
+		padding-right 70px
+		@extends .title
+		text-align center
 		strong
+			display block
+			font-family $pfb
+			font-size 30px
+			color #f26c4f
+	&__text
+		margin-bottom 30px
+	&__list
+		margin-bottom 22px
+		padding-left 23px
+		font-size 18px
+	&__item
+		position relative
+		line-height 1.2
+		&:before
+			vcentery()
+			left -23px
+			content ""
+			width 11px
+			height 11px
+			background-color #258bcc
+			border-radius 50%
+	&__duration
+		margin-bottom 0
+		padding-left 47px
+		font-family $pfb
+		font-size 18px
+		strong
+			font-size 24px
+
+	&__price
+		margin-bottom 22px
+		padding-left 13px
+		font-family $pfb
+		font-size 30px
+		color #f26c4f
+	&__cta
+		position relative
+		z-index 2
+		font-size 24px
+		color #FFF
+		text-align center
+		p
+			margin-bottom 1px
+			span
+				font-family $pfb
+		&:after,
+		&:before
+			position absolute
+			z-index 0
+			top 8px
+			content ""
+		&:after
+			right -26px
+			retinaSprite($badge_right_group)
+		&:before
+			left -26px
+			retinaSprite($badge_left_group)
+	&__cta-w
+		position relative
+		z-index 1
+		background-color #258bcc
+		// &:after
+		// 	position absolute
+		// 	bottom 0
+		// 	content ""
+
