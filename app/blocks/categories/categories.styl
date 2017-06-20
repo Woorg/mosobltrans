@@ -10,28 +10,30 @@
 
 	&__category_b
 		background url('../images/content/cat-b-img.jpg') 50% 0 no-repeat
-		.categories__cta
+		.categories__cta-w
 			&:after
-				bottom 0
-				left 0
+				bottom -68px
+				left -96px
 				retinaSprite($arrow_down_left_group)
+		.categories__row_cat-b
+			padding-top 38px
 	&__category_c
 		background url('../images/content/cat-c-img.jpg') 50% 0 no-repeat
-		.categories__cta
+		.categories__cta-w
 			&:after`
 				bottom 0
 				right 0
 				retinaSprite($arrow_down_right_group)
 	&__category_d
 		background url('../images/content/cat-d-img.jpg') 50% 0 no-repeat
-		.categories__cta
+		.categories__cta-w
 			&:after
 				bottom 0
 				left 0
 				retinaSprite($arrow_down_left_2_group)
 	&__category_e
 		background url('../images/content/cat-e-img.jpg') 50% 0 no-repeat
-		.categories__cta
+		.categories__cta-w
 			&:after
 				bottom 0
 				right 0
@@ -81,7 +83,6 @@
 		font-size 18px
 		strong
 			font-size 24px
-
 	&__price
 		margin-bottom 22px
 		padding-left 13px
@@ -91,31 +92,37 @@
 	&__cta
 		position relative
 		z-index 2
+		margin-right 33px
+		margin-left -33px
+
 		font-size 24px
 		color #FFF
 		text-align center
 		p
 			margin-bottom 1px
+			line-height 1.2
 			span
 				font-family $pfb
 		&:after,
 		&:before
 			position absolute
 			z-index 0
-			top 8px
+			top 16px
 			content ""
-		&:after
-			right -26px
-			retinaSprite($badge_right_group)
 		&:before
 			left -26px
 			retinaSprite($badge_left_group)
+		&:after
+			right -26px
+			retinaSprite($badge_right_group)
 	&__cta-w
 		position relative
-		z-index 1
 		background-color #258bcc
-		// &:after
-		// 	position absolute
-		// 	bottom 0
-		// 	content ""
+		z-index 1
+		padding-top 8px
+		padding-bottom 10px
+		&:after
+			position absolute
+			content ""
+
 
