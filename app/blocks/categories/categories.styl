@@ -8,36 +8,7 @@
 	&__category
 		min-height 513px
 
-	&__category_b
-		background url('../images/content/cat-b-img.jpg') 50% 0 no-repeat
-		.categories__cta-w
-			&:after
-				bottom -68px
-				left -96px
-				retinaSprite($arrow_down_left_group)
-		.categories__row_cat-b
-			padding-top 38px
-	&__category_c
-		background url('../images/content/cat-c-img.jpg') 50% 0 no-repeat
-		.categories__cta-w
-			&:after`
-				bottom 0
-				right 0
-				retinaSprite($arrow_down_right_group)
-	&__category_d
-		background url('../images/content/cat-d-img.jpg') 50% 0 no-repeat
-		.categories__cta-w
-			&:after
-				bottom 0
-				left 0
-				retinaSprite($arrow_down_left_2_group)
-	&__category_e
-		background url('../images/content/cat-e-img.jpg') 50% 0 no-repeat
-		.categories__cta-w
-			&:after
-				bottom 0
-				right 0
-				retinaSprite($arrow_down_right_group)
+
 	&__row
 		clearfix()
 
@@ -60,7 +31,10 @@
 			font-size 30px
 			color #f26c4f
 	&__text
-		margin-bottom 30px
+		margin-bottom 26px
+		font-size 18px
+		line-height 1.2
+		text-align center
 	&__list
 		margin-bottom 22px
 		padding-left 23px
@@ -88,6 +62,7 @@
 		padding-left 13px
 		font-family $pfb
 		font-size 30px
+		line-height 1.2
 		color #f26c4f
 	&__cta
 		position relative
@@ -115,6 +90,7 @@
 		&:after
 			right -26px
 			retinaSprite($badge_right_group)
+
 	&__cta-w
 		position relative
 		background-color #258bcc
@@ -124,5 +100,101 @@
 		&:after
 			position absolute
 			content ""
+			bottom 0
 
+	&__category_b
+		background url('../images/content/cat-b-img.jpg') 50% 0 no-repeat
+		.categories__cta-w
+			&:after
+				bottom -68px
+				left -96px
+				retinaSprite($arrow_down_left_group)
+		.categories__row_cat-b
+			padding-top 38px
+	&__category_c
+		background url('../images/content/cat-c-img.jpg') 50% 0 no-repeat
+		.categories__in
+			padding-top 47px
+		.categories__content
+			margin-left 36px
+		.categories__title
+			margin-bottom 0
+			padding-right 0
+		.categories__duration
+			padding-left 85px
+		.categories__price
+			margin-bottom 3px
+			padding-left 46px
+		.categories__cta
+			margin-left 0
+			margin-right 0
+		.categories__cta-w:after
+			bottom -41px
+			right -97px
+			retinaSprite($arrow_down_right_2_group)
 
+		.categories__row_bottom
+			padding-top 12px
+	&__category_d
+		background url('../images/content/cat-d-img.jpg') 50% 0 no-repeat
+		.categories__in
+			padding-top 53px
+		.categories__content
+			margin-left 0
+			margin-right 32px
+		.categories__title
+			margin-bottom 0
+			padding-right 0
+		.categories__text
+			margin-left -30px
+			margin-right -28px
+		.categories__duration
+			padding-left 85px
+		.categories__price
+			margin-bottom 3px
+			padding-left 46px
+		.categories__cta
+			margin-left 0
+			margin-right 0
+
+		.categories__cta-w
+			position relative
+			&:after
+				bottom -27px
+				left -98px
+				retinaSprite($arrow_down_left_2_group)
+		.categories__row_bottom
+			margin-top -13px
+			padding-top 0
+	&__category_e
+		background url('../images/content/cat-e-img.jpg') 50% 0 no-repeat
+
+		.categories__in
+			padding-top 66px
+		.categories__content
+			margin-left 32px
+			margin-right 0
+		.categories__title
+			margin-bottom 0
+			padding-right 0
+		.categories__text
+			margin-right -28px
+			margin-bottom 16px
+			margin-left -30px
+		.categories__duration
+			padding-left 85px
+		.categories__price
+			margin-bottom 3px
+			padding-left 46px
+		.categories__cta
+			margin-left 0
+			margin-right 0
+
+		.categories__cta-w
+			&:after
+				bottom -17px
+				right -95px
+				retinaSprite($arrow_down_right_group)
+		.categories__row_bottom
+			margin-top -20px
+			padding-top 0
