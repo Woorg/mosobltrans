@@ -1,35 +1,39 @@
 .exchange
 	display block
 	background url('../images/general/exchange-bg.jpg') 50% 0 no-repeat
+	&__row
+		padding-top 139px
+	&__row_bottom
+		padding-top 42px
+		padding-bottom 0
 	&__in
 		@extends .in
-		padding-top 149px
-		padding-bottom 77px
 		clearfix()
 	&__content
 		position relative
+		margin-right 34px
 		float right
 		text-align center
 		&:after
 			position absolute
-			bottom -73px
-			left -27px
+			bottom -69px
+			left -57px
 			retinaSprite($arrow_down_left_group)
 			content ""
 
 	&__title
 		@extends .title
-		margin-bottom 50px
+		margin-bottom 39px
 		span
 			display block
 			color #f26c4f
 			font-family $pfb
 			font-size 30px
 	&__text
+		margin-right 5px
 		font-size 18px
 		font-family $pfb
 		span
-			font-size 24px
 			text-transform uppercase
 
 	&__price

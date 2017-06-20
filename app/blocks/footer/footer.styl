@@ -1,13 +1,16 @@
 .footer
+	position relative
+	// z-index 1
 	display block
 	background-color #258bcc
 	&__in
 		@extends .in
-		padding-top 47px
+		padding-top 33px
 		padding-bottom 40px
 		min-height 163px
 	&__row
-		margin-bottom 20px
+		margin-bottom 15px
+		line-height 1
 		clearfix()
 	&__logo,
 	&__nav,
@@ -22,24 +25,54 @@
 	&__nav
 		margin-top 15px
 		float right
-	// &__phone
+	&__phone
+		margin-top -10px
+		margin-left 35px
 	&__address
-		margin-left 137px
+		margin-left 128px
 	&__copyright
+		margin-top 5px
+		margin-right 5px
 		float right
+		font-size 18px
 
 
 .nav
 	&__list
 		font-size 0
 	&__item
-		margin-left 20px
+		margin-left 28px
 		display inline-block
 		vertical-align middle
 
 		&:first-child
 			margin-left 0
 		a
+			position relative
+			display inline-block
 			color #FFF
 			font-size 18px
+			line-height 1.2
 			text-decoration none
+			tr(background .2s ease)
+			&:after
+				position absolute
+				top 100%
+				left 0
+				right 0
+				width 100%
+				content ""
+				background transparent
+				background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, transparent 0, transparent 25%, transparent 0, transparent 50%) 0 / 1em .9em
+				border-bottom 1px solid transparent
+			&:hover
+				&:after
+					position absolute
+					top 100%
+					left 0
+					right 0
+					width 100%
+					content ""
+					background transparent
+					background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, #fff 0, #fff 25%, transparent 0, transparent 50%) 0 / 1em .9em
+					border-bottom 1px solid transparent

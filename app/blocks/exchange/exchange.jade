@@ -1,7 +1,12 @@
 mixin exchange()
 	section.exchange
-		.exchange__in
-			.exchange__content
-				h2.exchange__title Обмен прав <span>категории С, D, E</span> для иностранцев
-				p.exchange__text Российское водительское удостоверение через <span>месяц!</span>
-				p.exchange__price Cтоимость - 10 000 рублей
+		.exchange__row
+			.exchange__in
+				.exchange__content
+					h2.exchange__title Обмен прав <span>категории С, D, E</span> для иностранцев
+					p.exchange__text Российское водительское удостоверение через <span>месяц!</span>
+					p.exchange__price Cтоимость - 10 000 рублей
+		.exchange__row.exchange__row_bottom
+			.exchange__in
+				+form-exchange()
+
