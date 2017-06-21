@@ -4,21 +4,34 @@
 	padding-right 21px
 	padding-bottom 48px
 	padding-left 22px
-	width 364px
-
+	// width 364px
+	+r($t)
+		padding-top 14px
+		padding-bottom 14px
+	+r($m)
+		padding-left 0
+		padding-right 0
+		padding-bottom 18px
 	&__title
 		margin-bottom 10px
-		padding-left 64px
-		padding-right 64px
+		// padding-left 64px
+		// padding-right 64px
 		font-size 24px
 		line-height 1.2
 		text-transform uppercase
 		text-align center
+		+r($m)
+			margin-bottom 5px
+			padding-left 5px
+			padding-right 5px
+			white-space normal
 	&__form
 		text-align center
 
 	&__field
 		margin-bottom 10px
+		+r($m)
+			display none
 	&__input
 		border 1px solid #dddddd
 		padding-top 13px
@@ -36,6 +49,15 @@
 	&__captcha
 		margin-top 16px
 		margin-bottom 9px
+		+r($m)
+			margin-bottom 7px
+			display none
+		img
+			max-width 100%
+			height auto
+			+r($m)
+				display none
+
 	&__submit
 		@extends .button
 		width 100%
@@ -43,6 +65,11 @@
 .form_wide
 	padding-bottom 0
 	width 682px
+	width ratio-percentage(682, 1170)
+	+r($d)
+		padding-left 0
+		padding-right 0
+		width auto
 	.form__title
 		margin-bottom 23px
 
@@ -52,12 +79,18 @@
 		display inline-block
 		vertical-align top
 		width 300px
+		+r($d)
+			margin-left 0
+			width 100%
+			display block
 		&:first-child
 			margin-left 0
 	.form__submit
 		margin 10px auto 0
 		width 321px
-
+		display block
+		+r($m)
+			width 100%
 	.form__captcha
 		position relative
 		bottom 10px

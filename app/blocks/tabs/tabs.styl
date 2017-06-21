@@ -5,12 +5,14 @@
 		position relative
 		z-index 1
 		font-size 0
-		clearfix()
+		white-space nowrap
 	&__link
 		position relative
 		border 5px solid #f8f8f8
 		margin-left 30px
-		padding 27px 12px 24px 108px
+		// padding 46px 11px 38px 110px
+		padding 36px 11px 35px 110px
+
 		// width 280px
 		display inline-block
 		vertical-align middle
@@ -21,6 +23,12 @@
 		text-decoration none
 		white-space nowrap
 		border-radius 5px
+		+r($d-l)
+			margin-left 0
+			display block
+			text-align center
+		+r($t)
+			text-align center
 		span
 			font-family $pfb
 			color #f26c4f
@@ -33,17 +41,29 @@
 			left 20px
 			content ""
 	&__link_active
-		padding 37px 11px 36px 110px
+		// padding 48px 11px 48px 110px
+		padding 38px 11px 34px 110px
 		border-color transparent
 		background url('../images/general/cat-tab-active.png') 50% 0 / cover no-repeat
 		color #fff
 		text-decoration none
+		+r($d-l)
+			border 5px solid #ffffff
+			background #F26C4F
+		+r($m-l)
+			border none
+			padding 48px 11px 48px 80px
+			background-color transparent
+			background url('../images/general/cat-tab-active.png') 50% 0 / 100% 100% no-repeat
+
 		span
 			color #FFF
 	&__link_cat-b
 		&:after
-			left 8px
+			left 13px
 			retinaSprite($cat_b_group)
+			+r($t)
+				left 13px
 		&.tabs__link_active
 			&:after
 				retinaSprite($cat_b_active_group)

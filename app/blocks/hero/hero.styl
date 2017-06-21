@@ -1,28 +1,51 @@
 .hero
 	display block
 	background transparent url('../images/content/hero-img.jpg') 50% 0 no-repeat
+	+r($t)
+		background url('../images/content/hero-small-bg.jpg') 50% calc(0% + -2px) no-repeat
 	&__in
 		@extends .in
 		padding-top 34px
 		padding-bottom 30px
 		font-size 26px
 		clearfix()
+		+r($t)
+			padding-top 22px
+		+r($m)
+			padding-top 10px
+			padding-bottom 10px
 	&__left
 		float left
 		width 440px
+		width ratio-percentage(440, 1170)
+		+r($t)
+			width auto
+			float none
 	&__title
 		margin-top 4px
 		margin-bottom 30px
 		padding-right 110px
 		line-height 1.2
+		+r($d-l)
+			padding-right 0
+		+r($m)
+			padding-right 0
+		+r($t)
+			margin-bottom 220px
 		span
 			color #f26c4f
 	&__text
 		margin-bottom 78px
 		padding-right 110px
 		line-height 1.2
+		+r($d-l)
+			padding-right 0
+		+r($t)
+			margin-bottom 10px
 		p
 			margin-bottom 30px
+			+r($t)
+				margin-bottom 10px
 			span
 				color #f26c4f
 				text-transform uppercase
@@ -30,6 +53,8 @@
 	&__links
 		font-size 0
 		white-space nowrap
+		+r($t)
+			display none
 	&__link
 		position relative
 		margin-left 68px
@@ -40,6 +65,9 @@
 		line-height 1.2
 		text-decoration none
 		overflow hidden
+		+r($)
+			margin-left 34px
+			display block
 		&:first-child
 			margin-left 0
 		&:after
@@ -76,9 +104,13 @@
 	&__register
 		float right
 		width 370px
+		width ratio-percentage(370, 1170)
 		border-radius 5px
 		border 3px solid #ffffff
 		background-color rgba(255, 255, 255, 0.95)
+		+r($t)
+			float none
+			width auto
 	&__form
 		position relative
 		&:after

@@ -18,10 +18,17 @@
 		z-index 1
 		top 33px
 		left 16px
+		+r($d)
+			position relative
 	&__area-w
 		position relative
 		padding-top 29%
 		// padding-top 21%
+		+r($t)
+			padding-top 60%
+		+r($m)
+			padding-top 88%
+
 
 	&__area
 		position absolute
@@ -39,15 +46,33 @@
 	padding-left 58px
 	width 445px
 	min-height 338px
-	background url('../images/general/contacts-bg.svg') 0 0 no-repeat
+	background url('../images/general/contacts-bg.svg') 0 0 / cover no-repeat
 	text-align center
+	+r($t)
+		padding-top 30px
+		padding-right 15px
+		padding-bottom 30px
+		padding-left 15px
+		width 100%
+	+r($m)
+		left 0
+		min-height 318px
 	&__title
 		margin-bottom 11px
 		@extends .title
+		+r($m)
+			margin-bottom 21px
 	&__address
 		margin-bottom 8px
 		line-height 1
+		+r($m)
+			margin-bottom 23px
 	&__phone
 		margin-bottom 32px
+		+r($m)
+			margin-bottom 30px
 	&__button
+		width 100%
 		@extends .button
+		+r($t)
+			display block

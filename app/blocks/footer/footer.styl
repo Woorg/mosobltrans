@@ -8,10 +8,16 @@
 		padding-top 33px
 		padding-bottom 40px
 		min-height 163px
+		+r($m)
+			padding-top 10px
+			padding-bottom 10px
 	&__row
 		margin-bottom 15px
 		line-height 1
 		clearfix()
+		+($m)
+			margin-bottom 10px
+			text-align center
 	&__logo,
 	&__nav,
 	&__phone,
@@ -20,59 +26,46 @@
 		display inline-block
 		vertical-align middle
 		color #FFF
+		+r($d)
+			display block
+			text-align left
 	&__logo
 		line-height 1
 	&__nav
 		margin-top 15px
 		float right
+		+r($d)
+			float none
+		+($m)
+			margin-top 10px
 	&__phone
 		margin-top -10px
 		margin-left 35px
+		+r($d)
+			margin-left 0
+			line-height 1
+		+r($t)
+			margin-top 0
+			margin-left 0
+			margin-bottom 20px
 	&__address
 		margin-left 128px
+		+r($d)
+			margin-left 0
+			line-height 1
+
+		+r($t)
+			margin-left 0
+			margin-bottom 10px
+
 	&__copyright
 		margin-top 5px
 		margin-right 5px
 		float right
 		font-size 18px
+		+r($d)
+			float none
+		+r($t)
+			margin-right 0
+			float none
 
-
-.nav
-	&__list
-		font-size 0
-	&__item
-		margin-left 28px
-		display inline-block
-		vertical-align middle
-
-		&:first-child
-			margin-left 0
-		a
-			position relative
-			display inline-block
-			color #FFF
-			font-size 18px
-			line-height 1.2
-			text-decoration none
-			tr(background .2s ease)
-			&:after
-				position absolute
-				top 100%
-				left 0
-				right 0
-				width 100%
-				content ""
-				background transparent
-				background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, transparent 0, transparent 25%, transparent 0, transparent 50%) 0 / 1em .9em
-				border-bottom 1px solid transparent
-			&:hover
-				&:after
-					position absolute
-					top 100%
-					left 0
-					right 0
-					width 100%
-					content ""
-					background transparent
-					background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, #fff 0, #fff 25%, transparent 0, transparent 50%) 0 / 1em .9em
-					border-bottom 1px solid transparent

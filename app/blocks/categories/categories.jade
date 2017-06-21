@@ -6,13 +6,97 @@ mixin categories()
 		.categories__tabs.tabs
 			.tabs__in
 				.tabs__nav
-					a.tabs__link.tabs__link_cat-b(href="#tab-1") Категория <span>В</span>
+					a.tabs__link.tabs__link_cat-b.tabs__link_active(href="#tab-1") Категория <span>В</span>
+					.categories__category.categories__category_mob.categories__category_b
+						.categories__in
+							.categories__row
+								.categories__content.categories__content_right
+									.categories__title Курс подготовки на <strong>категорию «В»</strong>
+									ul.categories__list
+										li.categories__item Теоретический курс
+										li.categories__item Практический курс
+										li.categories__item Пакет документов для ГИБДД
+										li.categories__item Сопровождение в ГИБДД
+
+									p.categories__duration Длительность обучения - <strong>3 месяца</strong>
+									p.categories__price Cтоимость - 21 000 рублей
+									.categories__cta
+										.categories__cta-w
+											p Экспресс-курс: <span>+ 10 000 рублей</span>
+											p документы через 1,5 месяца!
+
+
+							.categories__row.categories__row_cat-b
+								+form-register-wide()
 					a.tabs__link.tabs__link_cat-c(href="#tab-2") Категория <span>С</span>
+					.categories__category.categories__category_mob.categories__category_c
+						.categories__in
+							.categories__row
+								.categories__content.categories__content_left
+									.categories__title Курс переподготовки с <strong>категории «В» на «С»</strong>
+									p.categories__text Курс подготовки водителей грузовых автомобилей рассчитан на тех, кто уже имеет водительские права категории «B».
+									ul.categories__list
+										li.categories__item Теоретический курс
+										li.categories__item Практический курс
+										li.categories__item Пакет документов для ГИБДД
+										li.categories__item Экзамены
+
+									p.categories__duration Длительность обучения <strong>3 месяца</strong>
+									p.categories__price cтоимость - 10 000 рублей
+									.categories__cta
+										.categories__cta-w
+											p Экспресс-курс: <span>+ 10 000 рублей</span>
+											p документы через 1,5 месяца!
+							.categories__row.categories__row_bottom
+								+form-register-wide()
 					a.tabs__link.tabs__link_cat-d(href="#tab-3") Категория <span>D</span>
-					a.tabs__link.tabs__link_cat-e.tabs__link_active(href="#tab-4") Категория <span>E</span>
+					.categories__category.categories__category_mob.categories__category_d
+						.categories__in
+							.categories__row
+
+								.categories__content.categories__content_right
+									.categories__title Курс переподготовки с <strong>категории «В» на «D»</strong>
+									p.categories__text Курс подготовки водителей автомобилей, предназначенных для перевозки пассажиров и имеющих более восьми сидячих мест, помимо сиденья водителя. Для тех, кто уже имеет водительские права категории «С» и достиг возраста не менее 21 года.
+									ul.categories__list
+										li.categories__item Теоретический курс
+										li.categories__item Практический курс
+										li.categories__item Пакет документов для ГИБДД
+										li.categories__item Экзамены
+
+									p.categories__duration Длительность обучения - <strong>3 месяца</strong>
+									p.categories__price Cтоимость - 10 000 рублей
+									.categories__cta
+										.categories__cta-w
+											p Экспресс-курс: <span>+ 10 000 рублей</span>
+											p документы через 1,5 месяца!
+
+							.categories__row.categories__row_bottom
+								+form-register-wide()
+					a.tabs__link.tabs__link_cat-e(href="#tab-4") Категория <span>E</span>
+					.categories__category.categories__category_mob.categories__category_e
+						.categories__in
+							.categories__row
+								.categories__content.categories__content_left
+									.categories__title Курс переподготовки с <strong>категории «В» на «E»</strong>
+									p.categories__text Курс предназначен для тех, кто уже имеет водительские права соответствующей категории («B», «C», «D») или все эти категории и рассчитан на подготовку водителей транспортных средств с тягачом.
+									ul.categories__list
+										li.categories__item Теоретический курс
+										li.categories__item Практический курс
+										li.categories__item Пакет документов для ГИБДД
+										li.categories__item Экзамены
+
+									p.categories__duration Длительность обучения - <strong>3 месяца</strong>
+									p.categories__price Cтоимость - 10 000 рублей
+									.categories__cta
+										.categories__cta-w
+											p Экспресс-курс: <span>+ 10 000 рублей</span>
+											p документы через 1,5 месяца!
+
+							.categories__row.categories__row_bottom
+								+form-register-wide()
 
 			.tabs__content
-				.tabs__tab#tab-1
+				.tabs__tab.tabs__tab_active#tab-1
 					.categories__category.categories__category_b
 						.categories__in
 							.categories__row
@@ -83,7 +167,7 @@ mixin categories()
 								+form-register-wide()
 
 
-				.tabs__tab.tabs__tab_active#tab-4
+				.tabs__tab#tab-4
 					.categories__category.categories__category_e
 						.categories__in
 							.categories__row

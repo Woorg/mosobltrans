@@ -6,6 +6,24 @@ mixin header()
 				span.logo__obl обл
 				span.logo__trans транс
 
+			nav.header__nav.nav.nav_top
+				label.nav__trigger(for="nav-input") Меню
+				input.nav__input#nav-input(type="checkbox")
+				.nav__list-w
+					ul.nav__list
+						li.nav__item.nav__item-b
+							a(href="#link") Категория <span>B</span>
+						li.nav__item.nav__item-c
+							a(href="#link") Категория <span>С</span>
+						li.nav__item.nav__item-d
+							a(href="#link") Категория <span>D</span>
+						li.nav__item.nav__item-e
+							a(href="#link") Категория <span>E</span>
+						li.nav__item.nav__item-exchange
+							a(href="#link") Обмен прав СНГ
+						li.nav__item.nav__item-contacts
+							a(href="#link") Контакты
+
 			a.header__address.address(href="#link")
 				span г. Москва, Товарищеский пер., дом 3
 			a.header__phone.phone(href="tel:")

@@ -24,7 +24,8 @@ gulp.task('styles', () => (
 				rupture(),
 				autoprefixer()
 			],
-			'include css': true
+			'include css': true,
+			url: 'embedurl'
 		}))
 		.pipe(gulpIf(!isDebug, gcmq()))
 		.pipe(gulpIf(!isDebug, nano({zindex: false})))

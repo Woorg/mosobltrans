@@ -1,11 +1,25 @@
 .exchange
 	display block
 	background url('../images/general/exchange-bg.jpg') 50% 0 no-repeat
+	+r($t)
+		background url('../images/content/exchange-small-img.jpg') 50% 0 / contain no-repeat
+
 	&__row
 		padding-top 139px
+		+r($t)
+			padding-top 450px
+		+r($t-s)
+			padding-top 400px
+		+r($m-l)
+			padding-top 200px
+		+r($m)
+			padding-top 222px
+
 	&__row_bottom
 		padding-top 42px
 		padding-bottom 0
+		+r($m)
+			padding-top 0
 	&__in
 		@extends .in
 		clearfix()
@@ -14,12 +28,17 @@
 		margin-right 34px
 		float right
 		text-align center
+		+r($t)
+			margin-right 0
+			float none
 		&:after
 			position absolute
 			bottom -69px
 			left -57px
 			retinaSprite($arrow_down_left_group)
 			content ""
+			+r($t)
+				display none
 
 	&__title
 		@extends .title
@@ -35,7 +54,8 @@
 		font-family $pfb
 		span
 			text-transform uppercase
-
+		+r($m)
+			margin-right 0
 	&__price
 		font-size 30px
 		font-family $pfb

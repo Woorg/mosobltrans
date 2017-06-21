@@ -6,6 +6,9 @@
 		@extends .in
 		min-height 54px
 		font-size 0
+		+r($t-s)
+			min-height 94px
+			text-align center
 	&__logo,
 	&__address,
 	&__phone
@@ -15,20 +18,57 @@
 		line-height 1
 	&__logo
 		margin-top -1px
+		+r($t)
+			margin-top 10px
+			margin-left 56px
+		+r($t)
+			text-align left
+			float left
+		+r($t-s)
+			float none
+		+r(480)
+			margin-left 0
+		+r($m)
+			margin-left 40px
 	&__address
 		margin-top 17px
 		margin-left 115px
+		margin-left ratio-percentage(115, 1170)
+		+r($d-l)
+			margin-left 30px
+		+r($d)
+			display none
 	&__phone
 		margin-top 12px
 		float right
+		+r($t)
+			text-align right
+		+r($t-s)
+			margin-left 12px
+			float none
+			text-align left
+		+r($m-l)
+			margin-left 0
+	&__nav
+		position absolute
+		top 54px
+		left 10px
+		display none
+		width 267px
+		min-height 358px
+		+r($t)
+			display block
 
 .logo
 	width 342px
+	color #3f3f3f
 	font-family $l
 	font-size 0
 	line-height 1
-	color #3f3f3f
+	white-space nowrap
 	text-transform uppercase
+	+r($t)
+		width auto
 	&__mos,
 	&__obl,
 	&__trans
@@ -36,17 +76,26 @@
 		font-size 40px
 		white-space nowrap
 		text-transform uppercase
+		+r($t)
+			font-size 25px
+			tr(all .2s ease)
 		&::first-letter
 			font-size 48px
 			color #f26c4f
+			+r($t)
+				font-size 30px
 .logo_style-sec
 	color #FFF
 	.logo__mos,
 	.logo__obl,
 	.logo__trans
 		color #FFF
+		+r($t)
+			font-size 35px
 		&::first-letter
 			color #FFF
+			+r($t)
+				font-size 42px
 
 
 .address
@@ -103,6 +152,9 @@
 	font-family $pfl
 	font-size 28px
 	color #3f3f3f
+	tr(all .2s ease)
+	+r($t)
+		font-size 24px
 	span
 		padding-right 6px
 		color #f26c4f

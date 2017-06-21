@@ -1,0 +1,158 @@
+.nav
+	&__list
+		font-size 0
+	&__item
+		margin-left 28px
+		display inline-block
+		vertical-align middle
+
+		&:first-child
+			margin-left 0
+		a
+			position relative
+			display inline-block
+			color #FFF
+			font-size 18px
+			line-height 1.2
+			text-decoration none
+			tr(background .2s ease)
+			&:after
+				position absolute
+				top 100%
+				left 0
+				right 0
+				width 100%
+				content ""
+				background transparent
+				background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, transparent 0, transparent 25%, transparent 0, transparent 50%) 0 / 1em .9em
+				border-bottom 1px solid transparent
+			&:hover
+				&:after
+					position absolute
+					top 100%
+					left 0
+					right 0
+					width 100%
+					content ""
+					background transparent
+					background linear-gradient(#f5f5f5, #f5f5f5) padding-box, repeating-linear-gradient(-45deg, #fff 0, #fff 25%, transparent 0, transparent 50%) 0 / 1em .9em
+					border-bottom 1px solid transparent
+
+.nav_top
+	.nav__trigger
+		position absolute
+		z-index 1
+		top -38px
+		left 0
+		width 24px
+		height 21px
+		cursor pointer
+		background url('../images/general/menu-button.svg') 0 0 no-repeat
+		tr(all .2s ease )
+		&:hover
+			background url('../images/general/menu-button-active.svg') 0 0 no-repeat
+
+	.nav__trigger_active
+		background url('../images/general/menu-button-active.svg') 0 0 no-repeat
+		&:hover
+			background url('../images/general/menu-button.svg') 0 0 no-repeat
+
+	.nav__list-w
+		position relative
+		top 40px
+		border-right 2px solid #f26c4f
+		border-bottom 2px solid #f26c4f
+		padding-top 20px
+		padding-left 17px
+		padding-bottom 20px
+		background #f2f2f2
+		display none
+		visibility hidden
+		opacity 0
+		tr(all .2s ease)
+	.nav__input
+		&:checked ~
+			.nav__list-w
+				visibility visible
+				opacity 1
+				display block
+	.nav__input
+		display none
+	.nav__item
+		margin-left 0
+		margin-bottom 20px
+		display block
+		a
+			padding-left 50px
+			display block
+			color #3f3f3f
+			text-align left
+			&:after
+				vcentery()
+				content ""
+				right auto
+				border-bottom none
+			&:hover
+				span
+					color #f26c4f
+	.nav__item-b
+		a
+			&:after
+				retinaSprite($cat_b_small_group)
+			&:hover
+				&:after
+					retinaSprite($cat_b_small_active_group)
+	.nav__item-c
+		a
+			&:after
+				retinaSprite($cat_c_small_group)
+			&:hover
+				&:after
+					retinaSprite($cat_c_small_active_group)
+	.nav__item-d
+		a
+			&:after
+				left 3px
+				retinaSprite($cat_d_small_group)
+			&:hover
+				&:after
+					retinaSprite($cat_d_small_active_group)
+	.nav__item-e
+		a
+			&:after
+				left 3px
+				retinaSprite($cat_e_small_group)
+			&:hover
+				&:after
+					retinaSprite($cat_e_small_active_group)
+	.nav__item-exchange
+		a
+			&:after
+				left 10px
+				retinaSprite($exchange_icon_group)
+			&:hover
+				&:after
+					retinaSprite($exchange_icon_active_group)
+	.nav__item-contacts
+		a
+			&:after
+				left 7px
+				retinaSprite($contacts_icon_group)
+			&:hover
+				&:after
+					retinaSprite($contacts_icon_active_group)
+
+
+.nav_bottom
+	.nav__list
+		+r($t)
+			margin auto
+			width 100%
+	.nav__item
+		+r($t)
+			margin-left 0
+			margin-bottom 10px
+			width 48%
+			margin-right 1%
+			&:nth-child(2n)
+				margin-right 0
