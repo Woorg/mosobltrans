@@ -1,6 +1,7 @@
 .map
 	position relative
 	display block
+	overflow hidden
 	&:after
 		position absolute
 		top -1px
@@ -74,5 +75,6 @@
 	&__button
 		width 100%
 		@extends .button
+		text-decoration none
 		+r($t)
 			display block

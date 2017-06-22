@@ -1,7 +1,12 @@
 .header
+	position fixed
+	z-index 10
+	top 0
+	left 0
+	width 100%
 	display block
 	border 1px solid #e2e6ed
-	background-color rgba(255, 255, 255, .32)
+	background rgba(255, 255, 255, .82)
 	&__in
 		@extends .in
 		min-height 54px
@@ -53,9 +58,9 @@
 		position absolute
 		top 54px
 		left 10px
+		z-index 0
 		display none
 		width 267px
-		min-height 358px
 		+r($t)
 			display block
 
@@ -104,6 +109,8 @@
 	color #3f3f3f
 	font-size 18px
 	line-height 1.2
+	+r($m)
+		text-align left
 	span
 		position relative
 		padding-bottom 4px
@@ -131,6 +138,8 @@
 		height 16px
 		background url('../images/general/marker.svg') 0 0 no-repeat
 		content ''
+		+r($m)
+			top 0
 	&:before
 		position absolute
 		bottom 4px
@@ -139,6 +148,8 @@
 		height 2px
 		background #f26c4f
 		content ''
+		+r($m)
+			bottom 16px
 .address_style-sec
 	color #FFF
 	&:after

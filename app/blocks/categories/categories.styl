@@ -17,15 +17,15 @@
 			padding-top 160px
 	&__category
 		min-height 513px
-		+r($d-l)
-			display none
-	&__category_mob
-		display none
 		// +r($d-l)
-		// 	display block
-		// 	text-align left
-	&__category_mob-active
-		display block
+		// 	display none
+		&.categories__category_mob
+			display none
+			// +r($d-l)
+			// 	display block
+			// 	text-align left
+		&.categories__category_mob-active
+			display block
 
 
 	&__row

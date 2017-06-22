@@ -1,11 +1,12 @@
 mixin form-register()
 	.form
 		h2.form__title Записаться <br/>на обучение
-		form.form__form(action="")
+		form.form__form#form(action="" method="post")
 			.form__field
-				input.form__input(type="text", placeholder="Ваше имя", value="")
+				input.form__input(type="text", placeholder="Ваше имя", value="", name='name' required )
+				label.form__label поля не заполнены
 			.form__field
-				input.form__input(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="")
+				input.form__input.form__input_phone(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="", name='phone' required)
 			.form__captcha
 				img(src="assets/images/general/captcha.jpg", alt="")
 
@@ -15,12 +16,14 @@ mixin form-register()
 mixin form-register-wide()
 	.form.form_wide
 		h2.form__title Записаться на обучение
-		form.form__form(action="")
+		form.form__form#form-2(action="" method="post")
 			.form__w
 				.form__field
-					input.form__input(type="text", placeholder="Ваше имя", value="")
+					input.form__input(type="text", placeholder="Ваше имя", value="", name='name' required)
+					label.form__label поля не заполнены
+
 				.form__field
-					input.form__input(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="")
+					input.form__input.form__input_phone(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="", name='phone' required)
 			.form__captcha
 				img(src="assets/images/general/captcha.jpg", alt="")
 
@@ -29,12 +32,14 @@ mixin form-register-wide()
 mixin form-exchange()
 	.form.form_wide
 		h2.form__title Записаться на обмен прав
-		form.form__form(action="")
+		form.form__form#form-3(action="" method="post")
 			.form__w
 				.form__field
-					input.form__input(type="text", placeholder="Ваше имя", value="")
+					input.form__input(type="text", placeholder="Ваше имя", value="", name='name' required)
+					label.form__label поля не заполнены
+
 				.form__field
-					input.form__input(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="")
+					input.form__input.form__input_phone(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="", name='phone' required)
 			.form__captcha
 				img(src="assets/images/general/captcha.jpg", alt="")
 

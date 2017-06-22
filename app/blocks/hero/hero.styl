@@ -1,18 +1,26 @@
 .hero
 	display block
-	background transparent url('../images/content/hero-img.jpg') 50% 0 no-repeat
+	background transparent url('../images/content/hero-img.jpg') 50% calc(0% + 30px) no-repeat
 	+r($t)
-		background url('../images/content/hero-small-bg.jpg') 50% calc(0% + -2px) no-repeat
+		background url('../images/content/hero-small-bg.jpg') 50% calc(0% + 60px) no-repeat
+	+r($t-s)
+		background url('../images/content/hero-small-bg.jpg') 50% calc(0% + 80px) no-repeat
+
 	&__in
 		@extends .in
 		padding-top 34px
+		padding-top 84px
 		padding-bottom 30px
 		font-size 26px
 		clearfix()
 		+r($t)
-			padding-top 22px
+			padding-top 92px
+		+r(560)
+			padding-top 92px
 		+r($m)
 			padding-top 10px
+			padding-top 96px
+
 			padding-bottom 10px
 	&__left
 		float left
@@ -53,7 +61,7 @@
 	&__links
 		font-size 0
 		white-space nowrap
-		+r($t)
+		+r($d)
 			display none
 	&__link
 		position relative
@@ -65,7 +73,7 @@
 		line-height 1.2
 		text-decoration none
 		overflow hidden
-		+r($)
+		+r($d)
 			margin-left 34px
 			display block
 		&:first-child

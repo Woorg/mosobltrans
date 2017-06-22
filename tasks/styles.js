@@ -28,7 +28,7 @@ gulp.task('styles', () => (
 			url: 'embedurl'
 		}))
 		.pipe(gulpIf(!isDebug, gcmq()))
-		.pipe(gulpIf(!isDebug, nano({zindex: false})))
+		.pipe(gulpIf(!isDebug, nano({zindex: true})))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulpIf(isDebug, sourcemaps.write()))
 		.pipe(gulp.dest('dist/assets/styles'))

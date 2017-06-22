@@ -70,6 +70,10 @@
 		visibility hidden
 		opacity 0
 		tr(all .2s ease)
+		+r($d)
+			top 1px
+		+r($t-s)
+			top 40px
 	.nav__input
 		&:checked ~
 			.nav__list-w
@@ -148,11 +152,13 @@
 		+r($t)
 			margin auto
 			width 100%
+		+r($m)
+			text-align left
 	.nav__item
 		+r($t)
 			margin-left 0
 			margin-bottom 10px
-			width 48%
+			width 49%
 			margin-right 1%
 			&:nth-child(2n)
 				margin-right 0

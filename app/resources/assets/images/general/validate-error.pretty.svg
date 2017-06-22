@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="283" height="55" viewBox="0 0 283 55">
+    <defs>
+        <clipPath id="a">
+            <path fill="#fff" d="M951 1200v-55h283v55zm2-48v33a5 5 0 0 0 5 5h15.78l7.5 8 6.89-8H1227a5 5 0 0 0 5-5v-33a5 5 0 0 0-5-5H958a5 5 0 0 0-5 5z"/>
+        </clipPath>
+    </defs>
+    <path fill="#f2f2f2" fill-opacity=".77" d="M7 2h269a5 5 0 0 1 5 5v33a5 5 0 0 1-5 5H37.16l-6.89 8-7.5-8H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/>
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" d="M958 1147h269a5 5 0 0 1 5 5v33a5 5 0 0 1-5 5H988.16l-6.89 8-7.5-8H958a5 5 0 0 1-5-5v-33a5 5 0 0 1 5-5z" clip-path="url(&quot;#a&quot;)" transform="translate(-951 -1145)"/>
+</svg>

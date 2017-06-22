@@ -14,8 +14,6 @@
 		padding-bottom 18px
 	&__title
 		margin-bottom 10px
-		// padding-left 64px
-		// padding-right 64px
 		font-size 24px
 		line-height 1.2
 		text-transform uppercase
@@ -29,9 +27,22 @@
 		text-align center
 
 	&__field
+		position relative
 		margin-bottom 10px
-		+r($m)
-			display none
+	&__label
+		position absolute
+		top -54px
+		left 0
+		display none
+		width 288px
+		min-height 55px
+		color #d54121
+		font-size 18px
+		line-height 45px
+		text-align center
+		background url('../images/general/validate-error.svg') 0 0 / cover no-repeat
+		tr(all .2s ease)
+
 	&__input
 		border 1px solid #dddddd
 		padding-top 13px
@@ -44,11 +55,24 @@
 		font-family $pfti
 		font-size 14px
 		border-radius 5px
-		+placeholder()
+		placeholder()
 			color #8e9393
-	&__captcha
+		&.ui-state-valid
+			color #3f3f3f
+		&.ui-state-error ~
+			.form__label
+				display block
+		&:focus +
+			.form__label
+				display none
+
+
+		&__captcha
 		margin-top 16px
 		margin-bottom 9px
+		text-align center
+		overflow hidden
+		transform-origin left top
 		+r($m)
 			margin-bottom 7px
 			display none
@@ -57,6 +81,9 @@
 			height auto
 			+r($m)
 				display none
+	&__captcha-w
+		display inline-block
+
 
 	&__submit
 		@extends .button
@@ -76,6 +103,7 @@
 	.form__w,
 	.form__captcha
 		margin-left 20px
+		margin-left 2%
 		display inline-block
 		vertical-align top
 		width 300px
@@ -83,8 +111,8 @@
 			margin-left 0
 			width 100%
 			display block
-		&:first-child
-			margin-left 0
+	.form__w
+		margin-left 0
 	.form__submit
 		margin 10px auto 0
 		width 321px
@@ -94,3 +122,7 @@
 	.form__captcha
 		position relative
 		bottom 10px
+
+
+span.wpcf7-not-valid-tip
+	display none

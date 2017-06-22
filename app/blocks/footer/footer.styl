@@ -13,11 +13,11 @@
 			padding-bottom 10px
 	&__row
 		margin-bottom 15px
-		line-height 1
 		clearfix()
 		+($m)
 			margin-bottom 10px
 			text-align center
+
 	&__logo,
 	&__nav,
 	&__phone,
@@ -29,6 +29,8 @@
 		+r($d)
 			display block
 			text-align left
+		+r($m)
+			text-align center
 	&__logo
 		line-height 1
 	&__nav
@@ -43,16 +45,17 @@
 		margin-left 35px
 		+r($d)
 			margin-left 0
-			line-height 1
+			line-height 1.2
 		+r($t)
 			margin-top 0
 			margin-left 0
 			margin-bottom 20px
+
 	&__address
 		margin-left 128px
 		+r($d)
 			margin-left 0
-			line-height 1
+			line-height 1.2
 
 		+r($t)
 			margin-left 0
@@ -68,4 +71,5 @@
 		+r($t)
 			margin-right 0
 			float none
-
+		+r($m)
+			text-align left
