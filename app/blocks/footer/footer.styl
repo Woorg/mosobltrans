@@ -14,8 +14,8 @@
 	&__row
 		margin-bottom 15px
 		clearfix()
-		+($m)
-			margin-bottom 10px
+		+r($m)
+			margin-bottom 6px
 			text-align center
 
 	&__logo,
@@ -36,30 +36,33 @@
 	&__nav
 		margin-top 15px
 		float right
-		+r($d)
+		+r($d-l)
 			float none
 		+($m)
 			margin-top 10px
 	&__phone
 		margin-top -10px
 		margin-left 35px
-		+r($d)
+		+r($d-l)
 			margin-left 0
 			line-height 1.2
 		+r($t)
 			margin-top 0
 			margin-left 0
 			margin-bottom 20px
-
+			font-size 28px
+		+r($m)
+			margin-bottom 11px
 	&__address
 		margin-left 128px
 		+r($d)
 			margin-left 0
 			line-height 1.2
-
 		+r($t)
 			margin-left 0
 			margin-bottom 10px
+		+r($m)
+			font-size 16px
 
 	&__copyright
 		margin-top 5px
@@ -72,4 +75,5 @@
 			margin-right 0
 			float none
 		+r($m)
-			text-align left
+			margin-top 12px
+			text-align center

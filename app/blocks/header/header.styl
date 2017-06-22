@@ -152,10 +152,21 @@
 			bottom 16px
 .address_style-sec
 	color #FFF
+	+r($m)
+		font-size 16px
+		padding-left 22px
 	&:after
 		background url('../images/general/marker-sec.svg') 0 0 no-repeat
+		+r($m)
+			top 2px
+			left 8px
+			width 12px
 	&:before
 		background #FFF
+		+r($m)
+			bottom 1px
+			left 8px
+			width 10px
 .phone
 	position relative
 	padding-left 25px
@@ -182,5 +193,6 @@
 .phone_style-sec
 	color #FFF
 	text-decoration none
+	font-size 28px
 	&:after
 		background url('../images/general/phone-sec.svg') 0 0 no-repeat

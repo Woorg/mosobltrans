@@ -11,24 +11,46 @@
 		max-height 163px
 		background url('../images/general/map-top.svg') 50% 0 / cover no-repeat
 		content ""
+		+r($m)
+			display none
 	&__in
 		position relative
 		@extends .in
+		+r($m)
+			padding-right 0
+			padding-left 0
+		// &:before
+		// 	+r($m)
+		// 		position absolute
+		// 		z-index 0
+		// 		top -6px
+		// 		left 0
+		// 		width 320px
+		// 		height 101px
+		// 		background url("../images/general/contacts-shadow.png") 0 0 no-repeat
+		// 		content ''
+
 	&__contacts
 		position absolute
 		z-index 1
-		top 33px
+		top 30px
 		left 16px
+		+r($d-l)
+			left 1
 		+r($d)
 			position relative
+		+r($m)
+			top 9px
 	&__area-w
 		position relative
 		padding-top 29%
 		// padding-top 21%
+		+r($d-l)
+			padding-top 48%
 		+r($t)
 			padding-top 60%
 		+r($m)
-			padding-top 88%
+			padding-top 81%
 
 
 	&__area
@@ -51,13 +73,23 @@
 	text-align center
 	+r($t)
 		padding-top 30px
-		padding-right 15px
+		padding-right 4px
 		padding-bottom 30px
-		padding-left 15px
+		padding-left 3px
 		width 100%
 	+r($m)
 		left 0
-		min-height 318px
+		padding-top 56px
+		min-height 340px
+		background url('../images/general/contact-bg.png') 0 0 no-repeat
+	&__w
+		+r($t)
+			vcenter()
+			width 80%
+		+r($m-l)
+			width 95%
+
+
 	&__title
 		margin-bottom 11px
 		@extends .title
@@ -66,12 +98,26 @@
 	&__address
 		margin-bottom 8px
 		line-height 1
+		b
+			display inline-block
+		+r($d)
+			display inline-block
 		+r($m)
-			margin-bottom 23px
+			margin-left 36px
+			margin-right 26px
+			margin-bottom 20px
+			text-align center
 	&__phone
 		margin-bottom 32px
+		b
+			display inline-block
+		+r($d)
+			display inline-block
 		+r($m)
-			margin-bottom 30px
+			margin-bottom 25px
+			font-size 28px
+			span
+				padding-right 0
 	&__button
 		width 100%
 		@extends .button
