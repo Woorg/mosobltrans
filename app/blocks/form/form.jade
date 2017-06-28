@@ -4,9 +4,11 @@ mixin form-register()
 		form.form__form#form(action="" method="post")
 			.form__field
 				input.form__input(type="text", placeholder="Ваше имя", value="", name='name' required )
-				label.form__label поля не заполнены
+				label.form__label поле имя не заполнено
 			.form__field
 				input.form__input.form__input_phone(type="text", placeholder="+ 7 (_ _ _) _ _ _  _ _  _ _", value="", name='phone' required)
+				label.form__label.form__label_phone поле телефон не заполнено
+
 			.form__captcha
 				img(src="assets/images/general/captcha.jpg", alt="")
 

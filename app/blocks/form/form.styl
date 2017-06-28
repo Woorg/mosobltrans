@@ -5,6 +5,7 @@
 	padding-bottom 48px
 	padding-left 22px
 	// width 364px
+
 	+r($t)
 		padding-top 14px
 		padding-bottom 14px
@@ -23,8 +24,7 @@
 			padding-left 5px
 			padding-right 5px
 			white-space normal
-	&__form
-		text-align center
+
 
 	&__field
 		position relative
@@ -42,7 +42,8 @@
 		text-align center
 		background url('../images/general/validate-error.svg') 0 0 / cover no-repeat
 		tr(all .2s ease)
-
+	&__label_phone
+		top -157px
 	&__input
 		border 1px solid #dddddd
 		padding-top 13px
@@ -62,9 +63,9 @@
 		&.ui-state-error ~
 			.form__label
 				display block
-		&:focus +
-			.form__label
-				display none
+		// &:focus +
+		// 	.form__label
+		// 		display none
 
 
 		&__captcha
@@ -123,9 +124,24 @@
 		position relative
 		bottom 10px
 		// margin-top 16px
-		padding-top 20px
+		padding-top 16px
 		+r($d-l)
 			margin-left 0
 
 span.wpcf7-not-valid-tip
 	display none
+.form
+	.form__form
+		text-align center
+		.ajax-loader
+			display none
+
+@keyframes shake
+	10%, 90%
+		transform: translate3d(-1px, 0, 0);
+	20%, 80%
+		transform: translate3d(2px, 0, 0);
+	30%, 50%, 70%
+		transform: translate3d(-4px, 0, 0);
+	40%, 60%
+		transform: translate3d(4px, 0, 0);

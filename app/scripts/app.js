@@ -3,7 +3,7 @@ import svg4everybody from 'svg4everybody';
 import 'magnific-popup';
 import 'h5validate';
 import mask from "jquery-mask-plugin";
-
+import Blazy from "blazy";
 
 (function ($) {
 
@@ -13,7 +13,9 @@ import mask from "jquery-mask-plugin";
 
 		let $formForm = $('.form__form');
 
-		$formForm.h5Validate({});
+		$('.form__submit').on('click', function () {
+			$(this).parent().parent().h5Validate({});
+		});
 
 		// mask
 
@@ -89,13 +91,15 @@ import mask from "jquery-mask-plugin";
 			let sectionId = $(this).attr('href');
 
 			$('html, body').animate({
-				scrollTop: $(sectionId).offset().top
+				scrollTop: $('#top').offset().top
 			}, 500);
 
-			$(sectionId)
-				.find('.form__input').eq(0)
-				.attr('autofocus', true)
-				.focus();
+			$(sectionId).addClass('hero__form_animate');
+
+			// $(sectionId)
+			// 	.find('.form__input').eq(0)
+			// 	.attr('autofocus', true)
+			// 	.focus();
 		});
 
 
@@ -113,7 +117,7 @@ import mask from "jquery-mask-plugin";
 				$(this).siblings().removeClass(tabsNavLinkActive);
 				const tabCurrent = $(this).attr('href');
 				tab.not(tabCurrent).removeClass(tabActive).hide();
-				$(tabCurrent).fadeIn(200).addClass(tabActive).show();
+				$(tabCurrent).fadeIn(100).addClass(tabActive).show();
 
 			});
 
@@ -121,7 +125,7 @@ import mask from "jquery-mask-plugin";
 
 		tabs();
 
-		let $hNavCatLinks = $('.header__nav .nav__item-b a, .header__nav .nav__item-c a, .header__nav .nav__item-d a, .header__nav .nav__item-e a, .footer__nav .nav__item_cat-b a, .footer__nav .nav__item_cat-c a, .footer__nav .nav__item_cat-d a, .footer__nav .nav__item_cat-e a');
+		let $hNavCatLinks = $('.header__nav .nav__item-b a, .header__nav .nav__item-c a, .header__nav .nav__item-d a, .header__nav .nav__item-e a');
 
 		$hNavCatLinks.on( 'click' , function () {
 			let sectionId = $(this).attr('href');
@@ -147,10 +151,53 @@ import mask from "jquery-mask-plugin";
 			// console.log($(this).eq(secTLNT + 1).next());
 
 			$('html, body').animate({
-				scrollTop: $(sectionId).offset().top
+				scrollTop: $(sectionId).offset().top - 220
 			}, 500);
 
 		});
+
+		let $fNavCatLinks = $('.footer__nav .nav__item_cat-b a, .footer__nav .nav__item_cat-c a, .footer__nav .nav__item_cat-d a, .footer__nav .nav__item_cat-e a');
+
+		$fNavCatLinks.on( 'click' , function () {
+			let sectionId = $(this).attr('href');
+			let tabId = $(this).attr('href');
+			let tabsLink = $('.tabs__link');
+			let secTLN = tabId.slice(5, 6);
+			let secTLNT = secTLN - 1;
+
+			// console.log(tabId);
+
+			// $(tabId)
+			// 	.insertAfter(tabsLink.eq(secTLNT));
+			$(tabId)
+				// .prev()
+				.parent()
+				.prev()
+				.children()
+				.children()
+				.eq(secTLNT)
+				.addClass('tabs__link_active')
+				.siblings()
+				.removeClass('tabs__link_active');
+			// if($(tabId).parent().prev().children().children().eq(secTLNT).attr('href') === tabId) {
+			// 	console.log('true');
+			// } else {
+			// 	console.log('false');
+			// }
+
+			$(tabId)
+				.addClass('tabs__tab_active')
+				.siblings()
+				.removeClass('tabs__tab_active');
+
+			// console.log($(this).eq(secTLNT + 1).next());
+
+			$('html, body').animate({
+				scrollTop: $(sectionId).offset().top - 160
+			}, 500);
+
+		});
+
 
 		let $hNavOtherLinks = $('.header__nav .nav__item-exchange a, .header__nav .nav__item-contacts a');
 
@@ -285,9 +332,11 @@ import mask from "jquery-mask-plugin";
 
 		});
 
-
-
-
+		if ($(window).width() > 768) {
+			var bLazy = new Blazy({
+				loadInvisible: true
+			});
+		}
 
 
 	});
