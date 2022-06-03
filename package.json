@@ -106,7 +106,7 @@
     "jquery": "^2.1.4",
     "jquery-lazy": "^1.7.5",
     "jquery-mask-plugin": "^1.14.11",
-    "jquery-validation": "^1.16.0",
+    "jquery-validation": "^1.19.4",
     "jquery.maskedinput": "^1.4.1",
     "json-loader": "^0.5.4",
     "magnific-popup": "^1.1.0",
